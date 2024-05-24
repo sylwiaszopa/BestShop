@@ -33,3 +33,54 @@ body {
 a {
     text-decoration: none;
 }
+
+/*----------------HEADER----------------*/
+
+.header {
+    width: 100%;
+    height: 70px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+}
+
+.header .container {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: var(--font-raleway), sans-serif;
+    font-size: 2rem;
+    font-weight: var(--font-weight-light);
+    color: var(--color-primary);
+}
+
+.header__list {
+    display: flex;
+    align-items: center;
+}
+
+.header__el {
+    padding: 0 26px;
+}
+
+.header__link {
+    padding: 28px 18px 22px;
+    text-transform: uppercase;
+    font-size: 0.6875rem;
+    font-weight: var(--font-weight-bold);
+    color: var(--color-grey);
+    letter-spacing: 0.205rem;
+    border-bottom: 4px solid transparent;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.header__link:hover {
+    color: var(--color-black);
+    border-color: var(--color-primary);
+}
+
+.header__el:last-child {
+    padding-right: 0;
+}
