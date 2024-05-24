@@ -34,7 +34,7 @@ a {
     text-decoration: none;
 }
 
-/*----------------HEADER----------------*/
+/*---------------------------HEADER---------------------------*/
 
 .header {
     width: 100%;
@@ -85,7 +85,7 @@ a {
     padding-right: 0;
 }
 
-/*----------------HERO----------------*/
+/*---------------------------HERO---------------------------*/
 
 .hero {
     display: flex;
@@ -128,7 +128,7 @@ a {
     height: auto;
 }
 
-/*----------------STATISTICS----------------*/
+/*-------------------------STATISTICS-------------------------*/
 
 .statistics {
     margin-top: 100px;
@@ -209,4 +209,157 @@ a {
 
 .statistics__box-3::before {
     background: var(--color-green);
+}
+
+/*------------------------BENEFITS-------------------------*/
+
+.benefits {
+    background: var(--color-light-grey);
+    padding: 100px 0;
+}
+
+.benefits .container {
+    padding: 0 100px;
+}
+
+.benefits__box {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    background: var(--color-white);
+    border: 1px solid #E8E9ED;
+    border-radius: 5px;
+    margin-bottom: 37px;
+}
+
+.benefits__box--reverse {
+    flex-direction: row-reverse;
+    padding: 0 20px 0 70px;
+}
+
+/*benefits__content*/
+.benefits__content {
+    max-width: 415px;
+    margin: 90px 36px;
+}
+
+.benefits__title {
+    font-family: var(--font-raleway), sans-serif;
+    font-size: 2.25rem;
+}
+
+.benefits__text {
+    line-height: 1.375rem;
+    margin-top: 30px;
+}
+
+.benefits__content::after {
+    content: "";
+    display: block;
+    width: 328px;
+    height: 4px;
+    margin-top: 50px;
+}
+
+.benefits__content--macbook::after {
+    background: var(--color-redish);
+}
+
+.benefits__content--phone::after {
+    background: var(--color-primary);
+}
+
+.benefits__content--trumpet::after {
+    background: var(--color-green);
+}
+
+/*benefits__photo*/
+.benefits__photo {
+    position: relative;
+}
+
+.benefits__photo img {
+    position: relative;
+    z-index: 10;
+}
+
+.benefits__photo--macbook {
+    margin-bottom: 38px;
+    margin-right: 117px;
+}
+
+.benefits__photo--macbook::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    background: var(--color-redish);
+    border-radius: 41px;
+    z-index: 2;
+    top: -40px;
+    right: 0;
+    transform: rotate(45deg);
+}
+
+.benefits__photo--macbook img {
+    width: 386px;
+    height: auto;
+}
+
+.benefits__photo--phone::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 320px;
+    height: 320px;
+    background: var(--color-primary);
+    border-radius: 50%;
+    z-index: 2;
+    top: -20px;
+    left: 0;
+}
+
+.benefits__photo--phone img {
+    width: 426px;
+    height: auto;
+}
+
+/*last row*/
+.benefits__box--last {
+    display: flex;
+}
+
+.benefits__content-trumpet-box,
+.benefits__photo-trumpet-box {
+    margin-bottom: 0;
+}
+
+.benefits__content-trumpet-box {
+    max-width: 620px;
+    background: var(--color-white);
+    border: 1px solid #E8E9ED;
+    border-radius: 5px;
+}
+
+.benefits__content--trumpet {
+    max-width: none;
+    margin: 70px 35px;
+}
+
+.benefits__photo-trumpet {
+    background: var(--color-green);
+    border: 1px solid #E8E9ED;
+    border-radius: 5px;
+    display: flex;
+    flex-grow: 1;
+    margin-left: 60px;
+    align-items: center;
+    justify-content: center;
+}
+
+.benefits__photo-trumpet img {
+    width: 295px;
+    height: auto;
+    margin-top: 55px;
 }
