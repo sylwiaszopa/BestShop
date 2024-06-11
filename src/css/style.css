@@ -23,6 +23,7 @@
 
 body {
     font-family: var(--font-open-sans), sans-serif;
+    color: var(--color-black);
 }
 
 .container {
@@ -362,4 +363,147 @@ a {
     width: 295px;
     height: auto;
     margin-top: 55px;
+}
+
+/*------------------------PRICING-------------------------*/
+
+.pricing .container {
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.pricing__title {
+    font-family: var(--font-raleway), sans-serif;
+    font-size: 2.25rem;
+}
+
+.pricing__boxes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 56px;
+    margin-top: 50px;
+}
+
+.pricing__box {
+    width: 370px;
+    border: 1px solid var(--color-redish);
+    border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.pricing__box--premium {
+    border-color: var(--color-green);
+}
+
+.pricing__details {
+    margin-top: 34px;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.pricing__type {
+    font-family: var(--font-raleway), sans-serif;
+    font-weight: var(--font-weight-bold);
+    font-size: 1.25rem;
+    color: #13253B;
+}
+
+.pricing__price {
+    font-size: 2.875rem;
+    font-weight: var(--font-weight-light);
+    margin-top: 25px;
+}
+
+.pricing__box--basic .pricing__price {
+    color: var(--color-redish);
+    margin-bottom: 30px;
+}
+
+.pricing__box--premium .pricing__price {
+    color: var(--color-green);
+}
+
+.pricing__limited {
+    font-family: var(--font-raleway), sans-serif;
+    font-weight: var(--font-weight-bold);
+    font-size: 0.75rem;
+    color: #13253B;
+    margin-top: 18px;
+    text-align: center;
+}
+
+.pricing__items {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.pricing__item {
+    font-size: 0.875rem;
+    margin-bottom: 20px;
+}
+
+.pricing__item::before {
+    content: url("../assets/Ckechmark-1.svg");
+    position: relative;
+    left: -10px;
+}
+
+.pricing__item--not::before {
+    content: url("../assets/Close.svg");
+}
+
+.pricing__btn {
+    border-radius: 23px;
+    padding: 16px 56px;
+    font-size: 0.8125rem;
+    position: absolute;
+    bottom: -25px;
+    left: calc(50% - 75px);
+}
+
+.btn--basic, .btn--premium {
+    box-shadow: none;
+}
+
+.btn--basic {
+    background: var(--color-redish);
+}
+
+.btn--premium {
+    background: var(--color-green);
+}
+
+/*box--professional*/
+.pricing__box--professional {
+    width: 400px;
+    border-color: var(--color-primary);
+    box-shadow: 5px 10px 27px var(--color-primary-shadow);
+}
+
+.pricing__box--professional .pricing__type {
+    font-size: 1.3125rem;
+}
+
+.pricing__box--professional .pricing__price {
+    color: var(--color-primary);
+}
+
+.pricing__box--professional .pricing__limited {
+    margin-top: 24px;
+}
+
+.pricing__box--professional .pricing__item {
+    margin-bottom: 25px;
+}
+
+.btn--professional {
+    padding: 16px 64px;
+    left: calc(50% - 82.5px);
 }
