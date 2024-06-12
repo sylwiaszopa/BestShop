@@ -637,3 +637,37 @@ input[type="checkbox"]:checked + .checkbox {
     padding: 20px 97px;
     border-radius: 35px;
 }
+
+/*------------------------FOOTER-------------------------*/
+
+.footer {
+    padding: 20px 0;
+    background-color: var(--color-light-grey);
+    box-shadow: 0 -5px 40px #00000029;
+}
+
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__branding {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.logo--small {
+    font-size: 1.625rem;
+}
+
+.copyrights {
+    color: var(--color-grey);
+    font-size: 0.6875rem;
+    line-height: 0.9375rem;
+}
+
+.footer__socials a:first-of-type {
+    margin-right: 20px;
+}
