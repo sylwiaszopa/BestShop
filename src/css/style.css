@@ -197,7 +197,7 @@ a {
     border-radius: 50%;
     z-index: 0;
     top: 0;
-    left: calc(50% - 31.5px);
+    left: calc(50% - 32px);
 }
 
 .statistics__box-1::before {
@@ -505,7 +505,7 @@ a {
 
 .btn--professional {
     padding: 16px 64px;
-    left: calc(50% - 82.5px);
+    left: calc(50% - 83px);
 }
 
 /*------------------------CONTACT-------------------------*/
