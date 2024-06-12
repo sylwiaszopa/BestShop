@@ -507,3 +507,133 @@ a {
     padding: 16px 64px;
     left: calc(50% - 82.5px);
 }
+
+/*------------------------CONTACT-------------------------*/
+
+
+.contact .container {
+    margin: 150px auto 100px;
+    display: flex;
+    justify-content: center;
+    align-items:flex-start;
+    gap: 114px;
+}
+
+.contact__column {
+    max-width: 440px;
+}
+
+/*left column*/
+.contact__title {
+    font-family: var(--font-raleway), sans-serif;
+    font-size: 3.0625rem;
+    line-height: 3.6875rem;
+    margin-bottom: 22px;
+}
+
+.contact__text {
+    font-size: 1rem;
+    line-height: 1.375rem;
+    margin-bottom: 42px;
+}
+
+.contact__details {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.contact__details-item {
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    color: var(--color-grey);
+}
+
+.contact__details-item:first-of-type {
+    margin-right: 20px;
+}
+
+.contact__details-item img {
+    margin-right: 8px;
+}
+
+/*right column (form)*/
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.form__field {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form__label {
+    text-transform: uppercase;
+    font-size: 0.6875rem;
+    line-height: 0.9rem;
+    letter-spacing: 3px;
+    color: var(--color-primary);
+    font-weight: var(--font-weight-bold);
+}
+
+.form__input {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-bottom: 1px solid var(--color-grey);
+    background-color: transparent;
+}
+
+.form__input:focus {
+    border-color: #535353;
+}
+
+/*checkbox*/
+.form__checkbox {
+    display: flex;
+    cursor: pointer;
+}
+
+input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkbox {
+    width: 24px;
+    flex-shrink: 0;
+    height: 24px;
+    border: 1px solid #95989A;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 4px;
+    margin-right: 10px;
+}
+
+input[type="checkbox"]:checked + .checkbox {
+    background-image: url("../assets/Checkmark.svg");
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+.form__consent-text {
+    font-size: 0.75rem;
+    line-height: 1.0625rem;
+    color: #707070;
+}
+
+.btn--form {
+    align-self: flex-end;
+    font-size: 0.8125rem;
+    padding: 20px 97px;
+    border-radius: 35px;
+}
