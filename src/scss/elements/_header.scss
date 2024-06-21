@@ -12,15 +12,40 @@
 }
 
 .logo {
-  font-family: var(--font-raleway), sans-serif;
+  font-family: $font-raleway;
   font-size: 2rem;
-  font-weight: var(--font-weight-light);
-  color: var(--color-primary);
+  font-weight: $font-weight-light;
+  color: $color-primary;
 }
 
 .header__list {
   display: flex;
-  align-items: center;
+  //align-items: center;
+
+  @include mobile {
+    position: absolute;
+    left: 0;
+    top: 95px;
+    flex-direction: column;
+    background-color: $color-white;
+    width: 100%;
+    padding-bottom: 20px;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.16);
+    display: none;
+
+    .header__el {
+      padding: 0;
+    }
+
+    .header__link {
+      display: block;
+      padding: 14px 20px;
+    }
+
+    .header__link:hover {
+      border-color: transparent;
+    }
+  }
 }
 
 .header__el {
@@ -31,18 +56,70 @@
   padding: 28px 18px 22px;
   text-transform: uppercase;
   font-size: 0.6875rem;
-  font-weight: var(--font-weight-bold);
-  color: var(--color-grey);
+  font-weight: $font-weight-bold;
+  color: $color-grey;
   letter-spacing: 0.205rem;
   border-bottom: 4px solid transparent;
   transition: color 0.3s ease, border-bottom 0.3s ease;
 }
 
 .header__link:hover {
-  color: var(--color-black);
-  border-color: var(--color-primary);
+  color: $color-black;
+  border-color: $color-primary;
 }
 
 .header__el:last-child {
   padding-right: 0;
+}
+
+// Hamburger
+.header__hamburger-checkbox {
+  display: none;
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+  opacity: 0;
+
+  @include mobile {
+    &:checked {
+      ~ .header__list {
+        display: flex;
+      }
+
+      ~ .header__hamburger {
+        span {
+          &:nth-child(1) {
+            transform: rotate(45deg) translate(2px, 5px);
+          }
+          &:nth-child(2) {
+            opacity: 0;
+          }
+          &:nth-child(3) {
+            transform: rotate(-45deg) translate(2px, -5px);
+          }
+        }
+      }
+    }
+  }
+}
+
+.header__hamburger {
+  display: none;
+
+  span {
+    width: 20px;
+    height: 2px;
+    display: block;
+    margin-bottom: 3px;
+    background-color: $color-primary;
+    transition: 0.3s all ease-in-out;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  @include mobile {
+    display: block;
+  }
 }
