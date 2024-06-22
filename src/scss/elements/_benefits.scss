@@ -1,20 +1,34 @@
 .benefits {
-  background: var(--color-light-grey);
+  background: $color-light-grey;
   padding: 100px 0;
+
+  @include tablet {
+    padding: 50px 0;
+  }
 }
 
 .benefits .container {
   padding: 0 100px;
+
+  @include tablet {
+    padding: 0 15px;
+  }
 }
 
 .benefits__box {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  background: var(--color-white);
+  background: $color-white;
   border: 1px solid #E8E9ED;
   border-radius: 5px;
   margin-bottom: 37px;
+
+  @include tablet {
+    flex-direction: column-reverse !important;
+    align-items: center;
+    padding: 0 20px  !important;
+  }
 }
 
 .benefits__box--reverse {
@@ -26,10 +40,23 @@
 .benefits__content {
   max-width: 415px;
   margin: 90px 36px;
+
+
+  @include tablet {
+    margin: 0;
+    max-width: none;
+  }
+}
+
+.benefits__content--macbook,
+.benefits__content--phone {
+  @include tablet {
+    margin: 30px 0;
+  }
 }
 
 .benefits__title {
-  font-family: var(--font-raleway), sans-serif;
+  font-family: $font-raleway;
   font-size: 2.25rem;
 }
 
@@ -44,18 +71,22 @@
   width: 328px;
   height: 4px;
   margin-top: 50px;
+
+  @include tablet {
+    display: none;
+  }
 }
 
 .benefits__content--macbook::after {
-  background: var(--color-redish);
+  background: $color-redish;
 }
 
 .benefits__content--phone::after {
-  background: var(--color-primary);
+  background: $color-primary;
 }
 
 .benefits__content--trumpet::after {
-  background: var(--color-green);
+  background: $color-green;
 }
 
 /*benefits__photo*/
@@ -71,6 +102,10 @@
 .benefits__photo--macbook {
   margin-bottom: 38px;
   margin-right: 117px;
+
+  @include tablet {
+    margin: 40px 0 0;
+  }
 }
 
 .benefits__photo--macbook::before {
@@ -79,17 +114,29 @@
   position: absolute;
   width: 180px;
   height: 180px;
-  background: var(--color-redish);
+  background: $color-redish;
   border-radius: 41px;
   z-index: 2;
   top: -40px;
   right: 0;
   transform: rotate(45deg);
+
+
+  @include tablet {
+    width: 90px;
+    height: 90px;
+    right: -10px;
+    top: -30px;
+  }
 }
 
 .benefits__photo--macbook img {
   width: 386px;
   height: auto;
+
+  @include tablet {
+    width: 192px;
+  }
 }
 
 .benefits__photo--phone::before {
@@ -98,21 +145,41 @@
   position: absolute;
   width: 320px;
   height: 320px;
-  background: var(--color-primary);
+  background: $color-primary;
   border-radius: 50%;
   z-index: 2;
   top: -20px;
   left: 0;
+
+  @include tablet {
+    width: 131px;
+    height: 131px;
+    top: -15px;
+  }
+}
+
+.benefits__photo--phone {
+  @include tablet {
+    margin-top: 30px;
+  }
 }
 
 .benefits__photo--phone img {
   width: 426px;
   height: auto;
+
+  @include tablet {
+    width: 175px;
+  }
 }
 
 /*last row*/
 .benefits__box--last {
   display: flex;
+
+  @include tablet {
+    flex-direction: column;
+  }
 }
 
 .benefits__content-trumpet-box,
@@ -122,18 +189,28 @@
 
 .benefits__content-trumpet-box {
   max-width: 620px;
-  background: var(--color-white);
+  background: $color-white;
   border: 1px solid #E8E9ED;
   border-radius: 5px;
+
+  @include tablet {
+    max-width: none;
+    padding: 0 20px
+  }
 }
 
 .benefits__content--trumpet {
   max-width: none;
   margin: 70px 35px;
+
+  @include tablet {
+    margin: 0;
+    padding: 30px 0;
+  }
 }
 
 .benefits__photo-trumpet {
-  background: var(--color-green);
+  background: $color-green;
   border: 1px solid #E8E9ED;
   border-radius: 5px;
   display: flex;
@@ -141,6 +218,11 @@
   margin-left: 60px;
   align-items: center;
   justify-content: center;
+
+  @include tablet {
+    margin-left: 0;
+    margin-top: -5px;
+  }
 }
 
 .benefits__photo-trumpet img {
