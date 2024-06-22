@@ -1,6 +1,6 @@
 .footer {
   padding: 20px 0;
-  background-color: var(--color-light-grey);
+  background-color: $color-light-grey;
   box-shadow: 0 -5px 40px #00000029;
 }
 
@@ -21,7 +21,7 @@
 }
 
 .copyrights {
-  color: var(--color-grey);
+  color: $color-grey;
   font-size: 0.6875rem;
   line-height: 0.9375rem;
 }
